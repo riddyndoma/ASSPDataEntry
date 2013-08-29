@@ -34,6 +34,7 @@ public class UserController {
             return Outcome.Dashboad;
         }
         return Outcome.failure;
+        
     }
 
     public User getUserBean() {
