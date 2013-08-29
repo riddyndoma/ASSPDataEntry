@@ -12,12 +12,12 @@ import javax.faces.bean.ManagedProperty;
  *
  * @author Riddy NDOMA
  */
-// 
-// Enumération Outcome
-//
+
 @ManagedBean(name = "usercontroller")
 public class UserController {
-
+/*
+ Enumération Outcome
+*/
     public enum Outcome {
         Dashboad, failure
     }
@@ -29,8 +29,8 @@ public class UserController {
      validé*/
 
     public Outcome login() {
-        if ("riddy".equals(userBean.getLogin())
-                && "amerique".equals(userBean.getPwd())) {
+        if ("ima".equals(userBean.getLogin())
+                && "ima".equals(userBean.getPwd())) {
             return Outcome.Dashboad;
         }
         return Outcome.failure;
