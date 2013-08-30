@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Index"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <p:growl id="growl" showDetail="true" />  
+
+            <p:dashboard id="board" model="#{dashboardBean.model}">  
+
+                <p:panel id="sports" header="Sports">  
+                    <h:outputText value="Sports Content" />  
+                </p:panel>  
+
+                <p:panel id="finance" header="Finance">  
+                    <h:outputText value="Finance Content" />  
+                </p:panel>  
+
+                <p:panel id="lifestyle" header="Lifestyle">  
+                    <h:outputText value="Lifestyle Content"  />  
+                </p:panel>  
+
+                <p:panel id="weather" header="Weather">  
+                      
+                    <h:outputText value="Weather Content" />  
+                </p:panel>  
+
+                <p:panel id="politics" header="Politics">  
+                    <h:outputText value="Politics Content" />  
+                </p:panel>  
+            </p:dashboard>  
+
+            <div style="clear:both" />  
+
+            <p:separator />  
+
+            <h3>Tableau de bord</h3>  
+
+            <h:panelGrid columns="3">  
+                <p:panel id="pc" header="Pie Chart">  
+                    <h:outputText value="Prie Chart contenu en developpement" />  
+                  
+                </p:panel>  
+                <p:draggable for="pc" dashboard="board" />  
+
+                <p:panel id="map" header="Map">  
+                    <h:outputText value="Map Contenu en cours de developpement" /> 
+                   
+                </p:panel>  
+                <p:draggable for="map" dashboard="board" />  
+                <p:panel id="cam" header="Camembert">  
+                    <h:outputText value="Encours de developpement" />  
+                </p:panel>  
+                <p:draggable for="cam" dashboard="board" />  
+            </h:panelGrid>  
+
+        </ui:define>
+
+    </ui:composition>
+
+
+
+</html>
+
+
